@@ -26,3 +26,13 @@ CREATE TABLE location (
     building varchar
     room integer
 );
+
+--added additional table to database. 
+CREATE TABLE professors (
+	professor_id varchar UNIQUE PRIMARY KEY, 
+	course_id int REFERENCES course, 
+	experience int, 
+	major_taught varchar, 
+	classes_taught int, 
+	age int
+);
