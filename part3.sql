@@ -1,18 +1,31 @@
-
+--capitalized Customer. 
 SELECT *
-FROM customer;
+FROM Customer;
 
-SELECT LastName, firstname, address
+--capitalized FirstName and Address. 
+SELECT LastName, FirstName, address
 FROM Employee;
 
-SELECT Track.Name, Album.title
+--capitalized Title, cap all functions. 
+SELECT Track.Name, Album.Title
 FROM Track
-LEFT JOIN Album
-on Track.AlbumId = Album.AlbumId;
+FULL JOIN Album
+ON Track.AlbumId = Album.AlbumId;
 
+--artist as ar, added period between Genre and Name, CAP all functions. 
 SELECT t.Name, a.Title, ar.Name
-FROM Track as t
-LEFT JOIN Album as a
-on t.AlbumId = a.AlbumId
-LEFT JOIN Artist
-where GenreName = 'Punk';
+FROM Track AS t
+FULL JOIN Album AS a
+ON t.AlbumId = a.AlbumId
+FULL JOIN Artist AS ar
+ON a.ArtistID = ar.ArtistID 
+FULL JOIN Genre as g
+ON g.GenreID = t.GenreID
+WHERE g.Name = 'Punk';
+
+--11.
+SELECT t.Name, t.Composer
+FROM Track AS t
+FULL JOIN Artist as ar 
+ON ar.ArtistID = t.ArtistID
+WHERE g.Name = 'Insane Clown Posse';
