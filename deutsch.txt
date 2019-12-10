@@ -1,0 +1,74 @@
+Hans Deutsch 
+Final Exam 
+
+Part 1: 
+
+1. Version Control is a systematic theory that is used by data management people to help
+organize data files and structure. This is an important aspect of data management because
+it helps not only the user but also the other peoople in a team atmosphere understand what
+you were able to accomplish on that commit but also when you accomplished it. 
+
+2. Github is a public space where people can access other peoples work and contribute without
+having to use any storage space becasue everything is stored on the cloud. Github is an example
+of many platforms who do the same thing. Git is a general version-control languae the is 
+universal between different platforms like GitHub and GitBucket to name a few. 
+
+3. Git workflow involves forking the data that someone else has already done, you can in 
+turn branch the work so that you can work on the code without directly interfering with the 
+master branch. Once you have a file that you are happy with and would like to contrubute 
+you can add the file to a staging area. After adding it the the staging area, you can continue 
+working on adding additonal files unitl you have completed every you wanted to accomplish in 
+that singluar commit. Once all your work is added to the staging area, you now can push this 
+information up through to Github or wherever your repository is located. This comitting process 
+is usually paired with a message breifly describing what you have done in that commit. 
+
+4. Brnaching is really good to use when you are working on updating a code that is dealing with 
+network flow, or application development. Branching lets you experiment with the code you already
+have allowing you to test new codes and gives you room for error. If you do not branch, it might 
+cause an entire application failure. Another good way to use branching is if you are working on a
+huge project and wanted to split the work into indirect related "mini" projects that could also work
+as well. 
+
+5. Cloning is done through git itself. Whereas, when forking a repo, you can do that and basically 
+create a copy of the repo that already exists. 
+
+6. Git remote -v shows your history of all your cloning to see what you have cloned and see if 
+there is anyhting that you are missing from  the origin. You use this before you merge to make 
+sure there will be no merge conflicts. 
+
+7.
+--Generally, for denoting Primary keys, you want to use the word unique
+--before the primary key. in a relational database you need to show and identify 
+--which features are relational. An example would be, in table student_grade, the 
+--course_id would be a foreign key. Syntax for this line would be, 
+--(course_id REFERENCES course). Some obvious mistakes are in tables student_grade, and class, 
+--you need to have data type in there. In table student, integer should not be all caps, this 
+--isn't wrong, just not the right convection. Also, there is no reason in a database to have two 
+--of the same primary keys. You can just run a join to compile that data into one. 
+--also location table is missing a location_id primary key. Commas are also need between creation 
+--of different features.
+
+8. 
+--I would not know how to relate location with course because location is missing 
+--a primary key, and would not be able to join these two tables together. The way 
+--I would join these together would be to include a three way join between, location table
+--on location_id (after including it to the table), as well as student_grade, on course_id. 
+
+9. 
+--added this table to the part2.sql file. 
+CREATE TABLE professors (
+	professor_id varchar UNIQUE PRIMARY KEY, 
+	course_id int REFERENCES course, 
+	experience int, 
+	major_taught varchar, 
+	classes_taught int, 
+	age int
+);
+
+10. 
+--on part3.sql
+
+11. 
+--on part3.sql
+	
+	 
